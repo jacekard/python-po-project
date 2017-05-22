@@ -1,3 +1,7 @@
+from random import randint
+
 class Util:
-    def __int__(self):
-        print("util")
+
+    @staticmethod
+    def losuj(a, b):
+        return randint(a, b)
