@@ -11,7 +11,7 @@ class Trawa(Roslina):
     def rozmnazanie(self):
         child = Trawa(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        #self.swiat.sortujInicjatywa()
+        self.swiat.sortuj()
 
 
 

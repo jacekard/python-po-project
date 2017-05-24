@@ -11,7 +11,7 @@ class Wilk(Zwierze):
     def rozmnazanie(self):
         child = Wilk(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        self.swiat.lista.sort()
+        self.swiat.sortuj()
         print("Urodzil sie maly wilk!")
 
 

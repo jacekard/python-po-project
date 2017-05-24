@@ -11,7 +11,7 @@ class Jagody(Roslina):
     def rozmnazanie(self):
         child = Jagody(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        #self.swiat.sortujInicjatywa()
+        self.swiat.sortuj()
 
     def kolizja(self, other):
         print(other.getRodzaj() + " ginie otruty przez " + self.rodzaj)

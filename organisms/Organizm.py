@@ -66,16 +66,28 @@ class Organizm:
         correctX = True
         correctY = True
 
-        if(poz.x > self.swiat.width or poz.x < 1):
+        if(poz.x > self.swiat.width - 1 or poz.x < 0):
             correctX = False
 
-        if(poz.y > self.swiat.height or poz.y < 1):
+        if(poz.y > self.swiat.height - 1 or poz.y < 0):
             correctY = False
 
         if(correctX and correctY):
             return True
         else:
             return False
+
+    def czyPozycjaX(self, x):
+        if (x > self.swiat.width - 1 or x < 0):
+            return False
+        else:
+            return True
+
+    def czyPozycjaY(self, y):
+        if (y > self.swiat.height - 1 or y < 0):
+            return False
+        else:
+            return True
 
     def grow(self):
         self.wiek += 1
@@ -137,7 +149,7 @@ class Organizm:
 
     def ruch(self):
         ruch = Util.losuj(0,3)
-        tmp = point()
+        tmp = point(0, 0)
         if ruch == 0:
             tmp.y-=1
         elif ruch == 1:

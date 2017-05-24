@@ -13,7 +13,7 @@ class Zolw(Zwierze):
     def rozmnazanie(self):
         child = Zolw(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        self.swiat.lista.sort()
+        self.swiat.sortuj()
         print("Urodzil sie maly zolw!")
 
     def czyOdbilAtak(self, atakujacy):
@@ -27,7 +27,7 @@ class Zolw(Zwierze):
 
 
     def ruch(self):
-        tmp = point()
+        tmp = point(0, 0)
 
         if Util.losuj(0,3) == 2:
 
@@ -41,5 +41,5 @@ class Zolw(Zwierze):
             elif ruch == 3:
                 tmp.x+=1
 
-            return tmp
+        return tmp
 

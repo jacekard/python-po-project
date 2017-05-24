@@ -14,7 +14,7 @@ class Antylopa(Zwierze):
     def rozmnazanie(self):
         child = Antylopa(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        self.swiat.lista.sort()
+        self.swiat.sortuj()
         print("Urodzila sie mala antylopa!")
 
     def czyOdbilAtak(self, atakujacy):

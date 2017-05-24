@@ -11,6 +11,6 @@ class Owca(Zwierze):
     def rozmnazanie(self):
         child = Owca(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        self.swiat.lista.sort()
+        self.swiat.sortuj()
         print("Urodzila sie mala owca!")
 

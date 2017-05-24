@@ -12,7 +12,7 @@ class Mlecz(Roslina):
     def rozmnazanie(self):
         child = Mlecz(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        #self.swiat.sortujInicjatywa()
+        self.swiat.sortuj()
 
     def akcja(self):
         self.grow()

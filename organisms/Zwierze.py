@@ -11,9 +11,6 @@ class Zwierze(Organizm):
 
         tmp = self.ruch()
 
-        #tmp.x = 0
-        #tmp.y = 0
-
         if (self.pos.x + tmp.x > self.swiat.width - 1
             or self.pos.x + tmp.x < 1):
             tmp.x = 0

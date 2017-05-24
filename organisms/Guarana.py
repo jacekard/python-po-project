@@ -11,9 +11,9 @@ class Guarana(Roslina):
     def rozmnazanie(self):
         child = Guarana(self.swiat, self.pos.x, self.pos.y)
         self.swiat.lista.append(child)
-        #self.swiat.sortujInicjatywa()
+        self.swiat.sortuj()
 
     def kolizja(self, other):
-        other.self.setSila(other.self.getSila() + 3)
+        other.setSila(other.getSila() + 3)
         super().kolizja(other)
 
